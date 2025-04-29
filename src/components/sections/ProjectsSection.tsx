@@ -16,13 +16,13 @@ const projects: Project[] = [
   {
     title: "Quizenius",
     description: "A personalized AI Learning Platform that leverages artificial intelligence to generate personalized quizzes and learning materials.",
-    tags: ["AI", "NextJS", "ML", "Prompt Engineering"],
+    tags: ["GenAI", "Prompt Engineering", "Python", "Streamlit"],
     githubLink: "https://github.com/MalaiarasuGRaj/DigitalT3-PromptEngineering",
   },
   {
     title: "MongoChat",
     description: "Database chat agent that enables natural language interaction with MongoDB databases.",
-    tags: ["NLP", "Database", "React", "Node.js"],
+    tags: ["LLM", "Agentic AI", "MongoDB", "Flask"],
     githubLink: "https://github.com/MalaiarasuGRaj/MongoChat.git",
   },
   {
