@@ -2,6 +2,7 @@
 import { MotionDiv } from "../animation/MotionDiv";
 import { MotionButton } from "../animation/MotionButton";
 import { ArrowDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const HeroSection = () => {
   return (
@@ -20,7 +21,7 @@ export const HeroSection = () => {
         </p>
         <MotionButton
           className="bg-portfolio-purple text-white hover:bg-portfolio-purple-dark"
-          onClick={() => document.getElementById("contact")?.scrollIntoView({behavior: 'smooth'})}
+          onClick={() => window.open("https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/", "_blank")}
         >
           Let's Talk
         </MotionButton>
@@ -50,5 +51,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-
-import { motion } from "framer-motion";

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin } from "lucide-react";
 
 const navLinks = [
   { title: "Home", href: "#" },
@@ -38,20 +38,32 @@ export const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <motion.a
-              key={link.title}
-              href={link.href}
-              className="relative text-portfolio-purple-light hover:text-portfolio-purple transition-colors"
-              whileHover={{
-                scale: 1.05,
-              }}
-            >
-              {link.title}
-            </motion.a>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center">
+          <nav className="flex space-x-8 mr-4">
+            {navLinks.map((link) => (
+              <motion.a
+                key={link.title}
+                href={link.href}
+                className="relative text-portfolio-purple-light hover:text-portfolio-purple transition-colors"
+                whileHover={{
+                  scale: 1.05,
+                }}
+              >
+                {link.title}
+              </motion.a>
+            ))}
+          </nav>
+          <motion.a 
+            href="https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-portfolio-purple hover:text-portfolio-purple-light transition-colors"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Linkedin size={24} />
+          </motion.a>
+        </div>
 
         {/* Mobile Navigation Toggle */}
         <button
@@ -84,6 +96,16 @@ export const Navbar = () => {
                   {link.title}
                 </motion.a>
               ))}
+              <motion.a 
+                href="https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-portfolio-purple hover:text-portfolio-purple-light py-2 transition-colors flex items-center gap-2"
+                onClick={() => setIsOpen(false)}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Linkedin size={20} /> LinkedIn
+              </motion.a>
             </div>
           </motion.div>
         )}
