@@ -34,7 +34,7 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <a href="#" className="text-portfolio-purple text-xl font-bold">
-          MalaiarasuG
+          Malaiarasu G
         </a>
 
         {/* Desktop Navigation */}
