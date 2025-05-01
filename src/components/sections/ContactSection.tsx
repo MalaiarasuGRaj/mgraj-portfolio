@@ -42,9 +42,9 @@ type FormValues = z.infer<typeof formSchema>;
 // 2. Create a service (Gmail, Outlook, etc.)
 // 3. Create a template using the HTML template provided 
 // 4. Get your IDs from the dashboard
-const EMAILJS_SERVICE_ID = "service_id"; // Replace with your Service ID
-const EMAILJS_TEMPLATE_ID = "template_id"; // Replace with your Template ID
-const EMAILJS_USER_ID = "user_id"; // Replace with your Public Key
+const EMAILJS_SERVICE_ID = "service_rw7m1nt"; // Replace with your Service ID
+const EMAILJS_TEMPLATE_ID = "template_9eiatal"; // Replace with your Template ID
+const EMAILJS_USER_ID = "NII5Q_BAZDsiDQkJG"; // Replace with your Public Key
 
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
