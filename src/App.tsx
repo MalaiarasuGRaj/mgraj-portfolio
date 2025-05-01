@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import { CursorTrail } from "./components/animation/CursorTrail";
 
 const App = () => {
   // Create a client instance that persists during component lifecycle
@@ -17,6 +18,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <CursorTrail />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
