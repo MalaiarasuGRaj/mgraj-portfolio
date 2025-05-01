@@ -27,7 +27,7 @@ const projects: Project[] = [
   },
   {
     title: "MarQ",
-    description: "Upcoming release - Project details coming soon.",
+    description: "MarQ is an AI-powered marks analytics tool that simplifies student performance evaluation for educators. It offers instant subject-wise insights, student profiles, and one-click summary reports — no templates, just drag and drop.",
     tags: ["Coming Soon"],
   },
 ];
