@@ -68,8 +68,7 @@ export const AboutSection = () => {
                   </div>
                   <p className="text-portfolio-purple-light">
                     Contributed to the development of Generative AI-based Proof of Concepts (PoCs) 
-                    addressing real-world business problems. Gained hands-on experience in software 
-                    development, as well as manual and automated testing, throughout the internship.
+                    addressing real-world business problems. Worked across the development lifecycle, including implementing features and verifying functionality through systematic testing workflows.
                   </p>
                 </div>
               </div>
