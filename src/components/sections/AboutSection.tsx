@@ -57,7 +57,7 @@ export const AboutSection = () => {
                 <div className="card bg-muted hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
                   <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
                     <Calendar size={18} />
-                    <span>October 2023 - March 2024</span>
+                    <span>October 2024 - March 2025</span>
                   </div>
                   <h4 className="text-xl font-semibold text-portfolio-purple mb-1">
                     Generative AI Intern
