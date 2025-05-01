@@ -29,7 +29,6 @@ const projects: Project[] = [
     title: "MarQ",
     description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
     tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
-    githubLink: ["Coming Soon"],
   }
 ];
 
