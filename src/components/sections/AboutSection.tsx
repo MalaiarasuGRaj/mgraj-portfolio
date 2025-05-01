@@ -17,9 +17,7 @@ export const AboutSection = () => {
           delay={0.2}
         >
           <p className="mb-6">
-            I am a dedicated AI and software engineering professional with a passion for solving real-world problems through technology.
-            Currently focused on gaining hands-on experience through internships and projects in AI, 
-            machine learning, and software development.
+            I'm an aspiring software developer with a strong interest in AI and Data Analytics, driven by a passion for building practical solutions to real-world problems. Currently focused on enhancing my skills through hands-on projects and internships, I'm eager to contribute to impactful software development teams and grow into a well-rounded engineering professional.
           </p>
         </MotionDiv>
 
