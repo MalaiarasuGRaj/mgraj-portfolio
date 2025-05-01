@@ -37,10 +37,14 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-// Replace these with your actual EmailJS IDs
-const EMAILJS_SERVICE_ID = "service_id"; // You'll need to replace this
-const EMAILJS_TEMPLATE_ID = "template_id"; // You'll need to replace this
-const EMAILJS_USER_ID = "user_id"; // You'll need to replace this
+// TODO: Replace these with your actual EmailJS IDs from your EmailJS dashboard
+// 1. Go to https://dashboard.emailjs.com/sign-up
+// 2. Create a service (Gmail, Outlook, etc.)
+// 3. Create a template using the HTML template provided 
+// 4. Get your IDs from the dashboard
+const EMAILJS_SERVICE_ID = "service_id"; // Replace with your Service ID
+const EMAILJS_TEMPLATE_ID = "template_id"; // Replace with your Template ID
+const EMAILJS_USER_ID = "user_id"; // Replace with your Public Key
 
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,13 +67,13 @@ export const ContactSection = () => {
     // Log the form data (for debugging)
     console.log("Form submitted with data:", data);
     
-    // Prepare template parameters
+    // Prepare template parameters - these must match the variables in your EmailJS template
     const templateParams = {
-      to_email: "govindarajmalaiarasu@gmail.com",
       from_name: data.fullName,
       from_email: data.email,
       phone_number: data.phoneNumber,
       message: data.reason,
+      to_email: "govindarajmalaiarasu@gmail.com", // This is not used by EmailJS directly but can be used in your template
     };
 
     // Send the email using EmailJS
