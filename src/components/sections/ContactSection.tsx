@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Mail, Send } from "lucide-react";
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 import {
   Form,
   FormControl,
@@ -17,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/sonner";
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 
 const formSchema = z.object({
   fullName: z.string().min(2, {
@@ -28,12 +30,21 @@ const formSchema = z.object({
   reason: z.string().min(10, {
     message: "Please provide a reason with at least 10 characters.",
   }),
+  email: z.string().email({
+    message: "Please provide a valid email address.",
+  }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
 
+// Replace these with your actual EmailJS IDs
+const EMAILJS_SERVICE_ID = "service_id"; // You'll need to replace this
+const EMAILJS_TEMPLATE_ID = "template_id"; // You'll need to replace this
+const EMAILJS_USER_ID = "user_id"; // You'll need to replace this
+
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailError, setEmailError] = useState<string | null>(null);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -41,21 +52,45 @@ export const ContactSection = () => {
       fullName: "",
       phoneNumber: "",
       reason: "",
+      email: "",
     },
   });
 
   function onSubmit(data: FormValues) {
     setIsSubmitting(true);
+    setEmailError(null);
     
-    // In a real application, you would send this data to an API or email service
+    // Log the form data (for debugging)
     console.log("Form submitted with data:", data);
     
-    // Simulate API call
-    setTimeout(() => {
+    // Prepare template parameters
+    const templateParams = {
+      to_email: "govindarajmalaiarasu@gmail.com",
+      from_name: data.fullName,
+      from_email: data.email,
+      phone_number: data.phoneNumber,
+      message: data.reason,
+    };
+
+    // Send the email using EmailJS
+    emailjs.send(
+      EMAILJS_SERVICE_ID, 
+      EMAILJS_TEMPLATE_ID, 
+      templateParams, 
+      EMAILJS_USER_ID
+    )
+    .then(() => {
       toast.success("Message sent successfully! I'll get back to you soon.");
       form.reset();
+    })
+    .catch((error) => {
+      console.error("Email sending failed:", error);
+      setEmailError("Failed to send email. Please try again later or contact directly at govindarajmalaiarasu@gmail.com");
+      toast.error("Failed to send message. Please try again.");
+    })
+    .finally(() => {
       setIsSubmitting(false);
-    }, 1000);
+    });
   }
 
   return (
@@ -65,6 +100,13 @@ export const ContactSection = () => {
       </MotionDiv>
 
       <div className="max-w-3xl mx-auto mt-12">
+        {emailError && (
+          <Alert variant="destructive" className="mb-6">
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>{emailError}</AlertDescription>
+          </Alert>
+        )}
+
         <MotionDiv
           className="card bg-muted p-8"
           type="fade"
@@ -81,6 +123,25 @@ export const ContactSection = () => {
                     <FormControl>
                       <Input 
                         placeholder="Your name" 
+                        {...field} 
+                        className="bg-portfolio-black/50 border-portfolio-purple/30 focus-visible:border-portfolio-purple focus-visible:ring-portfolio-purple"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-portfolio-purple">Email</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="email"
+                        placeholder="Your email address" 
                         {...field} 
                         className="bg-portfolio-black/50 border-portfolio-purple/30 focus-visible:border-portfolio-purple focus-visible:ring-portfolio-purple"
                       />
@@ -162,3 +223,4 @@ export const ContactSection = () => {
     </section>
   );
 };
+
