@@ -93,7 +93,7 @@ export const ProjectsSection = () => {
                 <MotionButton
                   size="sm"
                   className="flex items-center gap-2 bg-portfolio-purple text-white hover:bg-portfolio-purple-dark"
-                  onClick={() => window.open(project.liveLink, "_blank")}
+                  onClick={() => window.open(project.demoLink, "_blank")}
                 >
                   <ExternalLink size={16} />
                   Play Demo
