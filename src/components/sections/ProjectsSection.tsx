@@ -14,10 +14,10 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Quizenius",
-    description: "A personalized AI Learning Platform that leverages artificial intelligence to generate personalized quizzes and learning materials.",
-    tags: ["GenAI", "Prompt Engineering", "Python", "Streamlit"],
-    githubLink: "https://github.com/MalaiarasuGRaj/DigitalT3-PromptEngineering",
+    title: "MarQ",
+    description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
+    tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
+    githubLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
   },
   {
     title: "MongoChat",
@@ -26,9 +26,10 @@ const projects: Project[] = [
     githubLink: "https://github.com/MalaiarasuGRaj/MongoChat.git",
   },
   {
-    title: "MarQ",
-    description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
-    tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
+    title: "Quizenius",
+    description: "A personalized AI Learning Platform that leverages artificial intelligence to generate personalized quizzes and learning materials.",
+    tags: ["GenAI", "Prompt Engineering", "Python", "Streamlit"],
+    githubLink: "https://github.com/MalaiarasuGRaj/DigitalT3-PromptEngineering",
   }
 ];
 
