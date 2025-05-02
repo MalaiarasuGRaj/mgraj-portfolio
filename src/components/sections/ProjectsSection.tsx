@@ -35,7 +35,7 @@ const projects: Project[] = [
     tags: ["GenAI", "Prompt Engineering", "Python", "Streamlit"],
     githubLink: "https://github.com/MalaiarasuGRaj/DigitalT3-PromptEngineering",
     demoLink: "https://drive.google.com/file/d/1fm8TFoUsveF3u6dJTJ0BxundQVqP2hfl/view?usp=sharing",
-    image: "/images/projects/quizenius.jpg",
+    image: "lovable-uploads/59f0b9b6-b781-4fa8-9dd2-cf17e8000ea8.png",
   }
 ];
 
