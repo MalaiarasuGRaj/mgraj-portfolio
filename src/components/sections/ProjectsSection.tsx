@@ -9,6 +9,7 @@ interface Project {
   tags: string[];
   githubLink?: string;
   liveLink?: string;
+  demoLink?: string;
   image?: string;
 }
 
@@ -18,6 +19,7 @@ const projects: Project[] = [
     description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
     tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
     liveLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
+    image: "/images/projects/marq.jpg",
   },
   {
     title: "MongoChat",
@@ -25,6 +27,7 @@ const projects: Project[] = [
     tags: ["LLM", "Agentic AI", "MongoDB", "Flask"],
     githubLink: "https://github.com/MalaiarasuGRaj/MongoChat.git",
     demoLink: "https://drive.google.com/file/d/1GgoN224DRq37ljKpkCkU8iH3hAtk7s49/view?usp=drive_link",
+    image: "/images/projects/mongochat.jpg",
   },
   {
     title: "Quizenius",
@@ -32,6 +35,7 @@ const projects: Project[] = [
     tags: ["GenAI", "Prompt Engineering", "Python", "Streamlit"],
     githubLink: "https://github.com/MalaiarasuGRaj/DigitalT3-PromptEngineering",
     demoLink: "https://drive.google.com/file/d/1fm8TFoUsveF3u6dJTJ0BxundQVqP2hfl/view?usp=sharing",
+    image: "/images/projects/quizenius.jpg",
   }
 ];
 
@@ -50,7 +54,17 @@ export const ProjectsSection = () => {
             type="scale"
             delay={0.2 * (index + 1)}
           >
-            <div className="h-40 bg-gradient-to-br from-portfolio-purple/30 to-portfolio-purple-light/10 rounded-t-lg mb-6"></div>
+            <div className="h-40 rounded-t-lg mb-6 overflow-hidden">
+              {project.image ? (
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} project`} 
+                  className="w-full h-full object-cover object-center"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-portfolio-purple/30 to-portfolio-purple-light/10"></div>
+              )}
+            </div>
             <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
             <p className="text-portfolio-purple-light mb-4">{project.description}</p>
             
