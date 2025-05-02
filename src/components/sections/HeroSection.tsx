@@ -23,7 +23,7 @@ export const HeroSection = () => {
           className="bg-portfolio-purple text-white hover:bg-portfolio-purple-dark"
           onClick={() => window.open("https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/", "_blank")}
         >
-          Let's Talk
+          Let's Connect
         </MotionButton>
       </MotionDiv>
       
