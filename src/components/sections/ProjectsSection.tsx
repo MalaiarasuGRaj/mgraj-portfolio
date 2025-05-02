@@ -27,7 +27,7 @@ const projects: Project[] = [
     tags: ["LLM", "Agentic AI", "MongoDB", "Flask"],
     githubLink: "https://github.com/MalaiarasuGRaj/MongoChat.git",
     demoLink: "https://drive.google.com/file/d/1GgoN224DRq37ljKpkCkU8iH3hAtk7s49/view?usp=drive_link",
-    image: "/images/projects/mongochat.jpg",
+    image: "lovable-uploads/58afb80a-ffac-4f3e-a3ea-c7a5e3237208.png",
   },
   {
     title: "Quizenius",
