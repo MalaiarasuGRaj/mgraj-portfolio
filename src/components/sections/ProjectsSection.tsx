@@ -17,7 +17,7 @@ const projects: Project[] = [
     title: "MarQ",
     description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
     tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
-    githubLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
+    liveLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
   },
   {
     title: "MongoChat",
