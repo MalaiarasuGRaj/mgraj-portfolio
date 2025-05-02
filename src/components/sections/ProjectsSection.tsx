@@ -96,7 +96,7 @@ export const ProjectsSection = () => {
                   onClick={() => window.open(project.liveLink, "_blank")}
                 >
                   <ExternalLink size={16} />
-                  Project Walkthrough
+                  Play Demo
                 </MotionButton>
               )}
             </div>
