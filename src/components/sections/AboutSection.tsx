@@ -34,6 +34,28 @@ export const AboutSection = () => {
                 <div className="card bg-muted hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
                   <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
                     <Calendar size={18} />
+                    <span>October 2024 - Present</span>
+                  </div>
+                  <h4 className="text-xl font-semibold text-portfolio-purple mb-1">
+                    Generative AI Intern
+                  </h4>
+                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4">
+                    <Briefcase size={18} />
+                    <span>DigitalT3 Software Solutions Pvt. Ltd., USA</span>
+                  </div>
+                  <p className="text-portfolio-purple-light">
+                    Contributed to the development of Generative AI-based Proof of Concepts (PoCs) 
+                    addressing real-world business problems. Worked across the development lifecycle, including implementing features and verifying functionality through systematic testing workflows.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Experience 2 */}
+              <div className="relative">
+                <div className="absolute -left-10 mt-1.5 h-5 w-5 rounded-full border-2 border-portfolio-purple-light bg-portfolio-black"></div>
+                <div className="card bg-muted hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
+                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
+                    <Calendar size={18} />
                     <span>May 2024 - August 2024</span>
                   </div>
                   <h4 className="text-xl font-semibold text-portfolio-purple mb-1">
@@ -47,28 +69,6 @@ export const AboutSection = () => {
                     Developed an Automated Question and Answer Generation System using various 
                     Natural Language Processing (NLP) techniques as part of an AI-powered hiring 
                     solution for a multinational company (MNC).
-                  </p>
-                </div>
-              </div>
-
-              {/* Experience 2 */}
-              <div className="relative">
-                <div className="absolute -left-10 mt-1.5 h-5 w-5 rounded-full border-2 border-portfolio-purple-light bg-portfolio-black"></div>
-                <div className="card bg-muted hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
-                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
-                    <Calendar size={18} />
-                    <span>October 2024 - March 2025</span>
-                  </div>
-                  <h4 className="text-xl font-semibold text-portfolio-purple mb-1">
-                    Generative AI Intern
-                  </h4>
-                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4">
-                    <Briefcase size={18} />
-                    <span>DigitalT3 Software Solutions Pvt. Ltd., USA</span>
-                  </div>
-                  <p className="text-portfolio-purple-light">
-                    Contributed to the development of Generative AI-based Proof of Concepts (PoCs) 
-                    addressing real-world business problems. Worked across the development lifecycle, including implementing features and verifying functionality through systematic testing workflows.
                   </p>
                 </div>
               </div>
