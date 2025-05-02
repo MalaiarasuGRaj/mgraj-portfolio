@@ -19,7 +19,7 @@ const projects: Project[] = [
     description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
     tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
     liveLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
-    image: "/images/projects/marq.jpg",
+    image: "lovable-uploads/abcd985c-cc41-4270-a8bd-04fe4d6906a0.png",
   },
   {
     title: "MongoChat",
