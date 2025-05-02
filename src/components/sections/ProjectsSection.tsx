@@ -24,12 +24,14 @@ const projects: Project[] = [
     description: "Database chat agent that enables natural language interaction with MongoDB databases.",
     tags: ["LLM", "Agentic AI", "MongoDB", "Flask"],
     githubLink: "https://github.com/MalaiarasuGRaj/MongoChat.git",
+    liveLink: "https://drive.google.com/file/d/1GgoN224DRq37ljKpkCkU8iH3hAtk7s49/view?usp=drive_link",
   },
   {
     title: "Quizenius",
     description: "A personalized AI Learning Platform that leverages artificial intelligence to generate personalized quizzes and learning materials.",
     tags: ["GenAI", "Prompt Engineering", "Python", "Streamlit"],
     githubLink: "https://github.com/MalaiarasuGRaj/DigitalT3-PromptEngineering",
+    liveLink: "https://drive.google.com/file/d/1fm8TFoUsveF3u6dJTJ0BxundQVqP2hfl/view?usp=sharing",
   }
 ];
 
