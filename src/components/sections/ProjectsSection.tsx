@@ -85,7 +85,18 @@ export const ProjectsSection = () => {
                   onClick={() => window.open(project.liveLink, "_blank")}
                 >
                   <ExternalLink size={16} />
-                  Live Demo
+                  See It Live
+                </MotionButton>
+              )}
+
+              {project.demoLink && (
+                <MotionButton
+                  size="sm"
+                  className="flex items-center gap-2 bg-portfolio-purple text-white hover:bg-portfolio-purple-dark"
+                  onClick={() => window.open(project.liveLink, "_blank")}
+                >
+                  <ExternalLink size={16} />
+                  Project Walkthrough
                 </MotionButton>
               )}
             </div>
