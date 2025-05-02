@@ -100,7 +100,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="section-padding">
       <MotionDiv type="fade" direction="up">
-        <h2 className="heading text-center">Let's Connect</h2>
+        <h2 className="heading text-center">Let's Talk</h2>
       </MotionDiv>
 
       <div className="max-w-3xl mx-auto mt-12">
