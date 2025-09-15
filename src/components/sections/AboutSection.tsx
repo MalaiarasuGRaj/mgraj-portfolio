@@ -17,7 +17,7 @@ export const AboutSection = () => {
           delay={0.2}
         >
           <p className="mb-6">
-            I'm an aspiring software developer with a strong interest in AI and Data Analytics, driven by a passion for building practical solutions to real-world problems. Currently focused on enhancing my skills through hands-on projects and internships, I'm eager to contribute to impactful software development teams and grow into a well-rounded engineering professional.
+          I’m an AI enthusiast driven by innovation and the future of technology. With a strong interest in long-term investing, I enjoy exploring ideas that create lasting impact. Passionate about public speaking and mentoring, I strive to inspire and guide the next generation of changemakers.
           </p>
         </MotionDiv>
 

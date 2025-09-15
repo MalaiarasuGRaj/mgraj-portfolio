@@ -15,11 +15,20 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "MarQ",
-    description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
-    tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
-    liveLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
-    image: "lovable-uploads/abcd985c-cc41-4270-a8bd-04fe4d6906a0.png",
+    title: "Diffusion-LLM POC",
+    description: "A proof-of-concept for a PDF summarizer with visual analysis capabilities, demonstrating the power of diffusion models and LLMs.",
+    tags: ["GenAI", "Diffusion LLM (dLLM)", "Streamlit", "POC"],
+    image: "lovable-uploads/Diffusion-LLM.png",
+    githubLink: "https://github.com/MalaiarasuGRaj/dLLM-Mercury",
+    liveLink: "https://diff-llm.streamlit.app",
+  },
+  {
+    title: "Agile Copilot",
+    description: "Built Agile Copilot, a full-stack app integrating Jira REST API for streamlined project management, bulk data handling, and issue management.",
+    tags: ["Next.js", "React", "Server Actions", "Jira REST API"],
+    image: "lovable-uploads/Agile-Copilot.png",
+    githubLink: "https://github.com/MalaiarasuGRaj/jira-integration-firebase",
+    liveLink: "https://agile-copilot.vercel.app",
   },
   {
     title: "MongoChat",
@@ -27,7 +36,14 @@ const projects: Project[] = [
     tags: ["LLM", "Agentic AI", "MongoDB", "Flask"],
     githubLink: "https://github.com/MalaiarasuGRaj/MongoChat.git",
     demoLink: "https://drive.google.com/file/d/1GgoN224DRq37ljKpkCkU8iH3hAtk7s49/view?usp=drive_link",
-    image: "lovable-uploads/58afb80a-ffac-4f3e-a3ea-c7a5e3237208.png",
+    image: "lovable-uploads/MongoChat.png",
+  },
+  {
+    title: "MarQ",
+    description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
+    tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
+    liveLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
+    image: "lovable-uploads/MarQ.png",
   },
   {
     title: "Quizenius",
@@ -35,7 +51,7 @@ const projects: Project[] = [
     tags: ["GenAI", "Prompt Engineering", "Python", "Streamlit"],
     githubLink: "https://github.com/MalaiarasuGRaj/DigitalT3-PromptEngineering",
     demoLink: "https://drive.google.com/file/d/1fm8TFoUsveF3u6dJTJ0BxundQVqP2hfl/view?usp=sharing",
-    image: "lovable-uploads/59f0b9b6-b781-4fa8-9dd2-cf17e8000ea8.png",
+    image: "lovable-uploads/Quizenius.png",
   }
 ];
 
@@ -46,11 +62,11 @@ export const ProjectsSection = () => {
         <h2 className="heading text-center">Projects</h2>
       </MotionDiv>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12">
+      <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto mt-12">
         {projects.map((project, index) => (
           <MotionDiv 
             key={project.title}
-            className="card bg-muted hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-500"
+            className="card bg-muted hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-500 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] transform hover:scale-105"
             type="scale"
             delay={0.2 * (index + 1)}
           >
@@ -62,7 +78,9 @@ export const ProjectsSection = () => {
                   className="w-full h-full object-cover object-center"
                 />
               ) : (
-                <div className="w-full h-full bg-gradient-to-br from-portfolio-purple/30 to-portfolio-purple-light/10"></div>
+                <div className="w-full h-full bg-gradient-to-br from-portfolio-purple/30 to-portfolio-purple-light/10 flex items-center justify-center">
+                  <span className='text-portfolio-purple-light'>Image Coming Soon</span>
+                </div>
               )}
             </div>
             <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
