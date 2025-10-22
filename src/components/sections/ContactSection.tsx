@@ -70,11 +70,12 @@ export const ContactSection = () => {
     // Prepare template parameters - these must match the variables in your EmailJS template
     const templateParams = {
       from_name: data.fullName,
-      from_email: data.email,
+      email: data.email,
       phone_number: data.phoneNumber,
       message: data.reason,
-      to_email: "govindarajmalaiarasu@gmail.com", // This is not used by EmailJS directly but can be used in your template
+      to_email: "govindarajmalaiarasu@gmail.com",
     };
+
 
     // Send the email using EmailJS
     emailjs.send(
