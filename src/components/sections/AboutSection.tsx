@@ -10,19 +10,20 @@ export const AboutSection = () => {
       </MotionDiv>
 
       <div className="max-w-4xl mx-auto">
-        <MotionDiv 
+        <MotionDiv
           className="mb-12 text-lg text-portfolio-purple-light"
           type="fade"
           direction="up"
           delay={0.2}
         >
           <p className="mb-6">
-          I’m an AI enthusiast driven by innovation and the future of technology. With a strong interest in long-term investing, I enjoy exploring ideas that create lasting impact. Passionate about public speaking and mentoring, I strive to inspire and guide the next generation of changemakers.
+            I’m an AI enthusiast driven by innovation and the future of technology. With a strong interest in long-term investing, I enjoy exploring ideas that create lasting impact. Passionate about public speaking and mentoring, I strive to inspire and guide the next generation of changemakers.
+            <span className="block font-handwriting text-3xl mt-4 text-right text-portfolio-purple">- Malaiarasu</span>
           </p>
         </MotionDiv>
 
         <div className="space-y-12">
-          <MotionDiv 
+          <MotionDiv
             type="fade"
             delay={0.4}
           >
@@ -44,12 +45,12 @@ export const AboutSection = () => {
                     <span>DigitalT3 Software Solutions Pvt. Ltd., USA</span>
                   </div>
                   <p className="text-portfolio-purple-light">
-                    Contributed to the development of Generative AI-based Proof of Concepts (PoCs) 
+                    Contributed to the development of Generative AI-based Proof of Concepts (PoCs)
                     addressing real-world business problems. Worked across the development lifecycle, including implementing features and verifying functionality through systematic testing workflows.
                   </p>
                 </div>
               </div>
-              
+
               {/* Experience 2 */}
               <div className="relative">
                 <div className="absolute -left-10 mt-1.5 h-5 w-5 rounded-full border-2 border-portfolio-purple-light bg-portfolio-black"></div>
@@ -66,8 +67,8 @@ export const AboutSection = () => {
                     <span>Indian Institute of Information Technology, Kottayam</span>
                   </div>
                   <p className="text-portfolio-purple-light">
-                    Developed an Automated Question and Answer Generation System using various 
-                    Natural Language Processing (NLP) techniques as part of an AI-powered hiring 
+                    Developed an Automated Question and Answer Generation System using various
+                    Natural Language Processing (NLP) techniques as part of an AI-powered hiring
                     solution for a multinational company (MNC).
                   </p>
                 </div>

@@ -63,10 +63,10 @@ export const ContactSection = () => {
   function onSubmit(data: FormValues) {
     setIsSubmitting(true);
     setEmailError(null);
-    
+
     // Log the form data (for debugging)
     console.log("Form submitted with data:", data);
-    
+
     // Prepare template parameters - these must match the variables in your EmailJS template
     const templateParams = {
       from_name: data.fullName,
@@ -79,29 +79,32 @@ export const ContactSection = () => {
 
     // Send the email using EmailJS
     emailjs.send(
-      EMAILJS_SERVICE_ID, 
-      EMAILJS_TEMPLATE_ID, 
-      templateParams, 
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateParams,
       EMAILJS_USER_ID
     )
-    .then(() => {
-      toast.success("Message sent successfully! I'll get back to you soon.");
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("Email sending failed:", error);
-      setEmailError("Failed to send email. Please try again later or contact directly at govindarajmalaiarasu@gmail.com");
-      toast.error("Failed to send message. Please try again.");
-    })
-    .finally(() => {
-      setIsSubmitting(false);
-    });
+      .then(() => {
+        toast.success("Message sent successfully! I'll get back to you soon.");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Email sending failed:", error);
+        setEmailError("Failed to send email. Please try again later or contact directly at govindarajmalaiarasu@gmail.com");
+        toast.error("Failed to send message. Please try again.");
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   }
 
   return (
     <section id="contact" className="section-padding">
       <MotionDiv type="fade" direction="up">
         <h2 className="heading text-center">Let's Talk</h2>
+        <p className="font-handwriting text-2xl text-center text-portfolio-purple-light mt-[-10px]">
+          Say hello!
+        </p>
       </MotionDiv>
 
       <div className="max-w-3xl mx-auto mt-12">
@@ -126,9 +129,9 @@ export const ContactSection = () => {
                   <FormItem>
                     <FormLabel className="text-portfolio-purple">Full Name</FormLabel>
                     <FormControl>
-                      <Input 
-                        placeholder="Your name" 
-                        {...field} 
+                      <Input
+                        placeholder="Your name"
+                        {...field}
                         className="bg-portfolio-black/50 border-portfolio-purple/30 focus-visible:border-portfolio-purple focus-visible:ring-portfolio-purple"
                       />
                     </FormControl>
@@ -136,7 +139,7 @@ export const ContactSection = () => {
                   </FormItem>
                 )}
               />
-              
+
               <FormField
                 control={form.control}
                 name="email"
@@ -144,10 +147,10 @@ export const ContactSection = () => {
                   <FormItem>
                     <FormLabel className="text-portfolio-purple">Email</FormLabel>
                     <FormControl>
-                      <Input 
+                      <Input
                         type="email"
-                        placeholder="Your email address" 
-                        {...field} 
+                        placeholder="Your email address"
+                        {...field}
                         className="bg-portfolio-black/50 border-portfolio-purple/30 focus-visible:border-portfolio-purple focus-visible:ring-portfolio-purple"
                       />
                     </FormControl>
@@ -155,7 +158,7 @@ export const ContactSection = () => {
                   </FormItem>
                 )}
               />
-              
+
               <FormField
                 control={form.control}
                 name="phoneNumber"
@@ -163,9 +166,9 @@ export const ContactSection = () => {
                   <FormItem>
                     <FormLabel className="text-portfolio-purple">Phone Number</FormLabel>
                     <FormControl>
-                      <Input 
-                        placeholder="Your phone number" 
-                        {...field} 
+                      <Input
+                        placeholder="Your phone number"
+                        {...field}
                         className="bg-portfolio-black/50 border-portfolio-purple/30 focus-visible:border-portfolio-purple focus-visible:ring-portfolio-purple"
                       />
                     </FormControl>
@@ -173,7 +176,7 @@ export const ContactSection = () => {
                   </FormItem>
                 )}
               />
-              
+
               <FormField
                 control={form.control}
                 name="reason"
@@ -181,9 +184,9 @@ export const ContactSection = () => {
                   <FormItem>
                     <FormLabel className="text-portfolio-purple">Why do you want to contact me?</FormLabel>
                     <FormControl>
-                      <Textarea 
-                        placeholder="Tell me about your project or inquiry" 
-                        {...field} 
+                      <Textarea
+                        placeholder="Tell me about your project or inquiry"
+                        {...field}
                         className="bg-portfolio-black/50 border-portfolio-purple/30 focus-visible:border-portfolio-purple focus-visible:ring-portfolio-purple min-h-[120px]"
                       />
                     </FormControl>
@@ -216,7 +219,7 @@ export const ContactSection = () => {
         >
           <div className="flex items-center justify-center gap-2 text-portfolio-purple-light">
             <Mail size={24} />
-            <a 
+            <a
               href="mailto:govindarajmalaiarasu@gmail.com"
               className="text-lg hover:text-portfolio-purple transition-colors"
             >

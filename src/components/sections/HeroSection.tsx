@@ -14,8 +14,8 @@ export const HeroSection = () => {
           direction="up"
           delay={0.2}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 gradient-text">
-            Hi, I'm Malaiarasu G
+          <h1 className="font-handwriting text-5xl md:text-6xl lg:text-7xl font-bold mb-4 gradient-text">
+            Malaiarasu G
           </h1>
           <p className="text-xl md:text-2xl text-portfolio-purple-light max-w-2xl mx-auto mb-8">
             Building skills, taking initiative, and learning by doing.

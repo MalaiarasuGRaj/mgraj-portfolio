@@ -82,6 +82,7 @@ export default {
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],
 				poppins: ['Poppins', 'sans-serif'],
+				handwriting: ['Caveat', 'cursive'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
