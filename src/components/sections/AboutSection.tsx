@@ -32,7 +32,7 @@ export const AboutSection = () => {
               {/* Experience 1 */}
               <div className="relative">
                 <div className="absolute -left-10 mt-1.5 h-5 w-5 rounded-full border-2 border-portfolio-purple-light bg-portfolio-black"></div>
-                <div className="card bg-muted hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
+                <div className="card bg-white/5 backdrop-blur-sm border border-white/10 hover:border-portfolio-purple/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
                   <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
                     <Calendar size={18} />
                     <span>October 2024 - Present</span>
@@ -54,7 +54,7 @@ export const AboutSection = () => {
               {/* Experience 2 */}
               <div className="relative">
                 <div className="absolute -left-10 mt-1.5 h-5 w-5 rounded-full border-2 border-portfolio-purple-light bg-portfolio-black"></div>
-                <div className="card bg-muted hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
+                <div className="card bg-white/5 backdrop-blur-sm border border-white/10 hover:border-portfolio-purple/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
                   <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
                     <Calendar size={18} />
                     <span>May 2024 - August 2024</span>

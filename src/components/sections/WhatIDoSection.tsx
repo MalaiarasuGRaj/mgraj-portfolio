@@ -11,14 +11,14 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => {
   return (
-    <MotionDiv 
-      className="card bg-muted hover:bg-muted/80 h-full"
+    <MotionDiv
+      className="card bg-white/5 backdrop-blur-sm border border-white/10 hover:border-portfolio-purple/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 group h-full"
       type="scale"
       delay={delay}
     >
-      <div className="text-portfolio-purple mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-portfolio-purple-light">{description}</p>
+      <div className="text-portfolio-purple transition-transform duration-300 mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-portfolio-purple transition-colors">{title}</h3>
+      <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">{description}</p>
     </MotionDiv>
   );
 };
@@ -54,45 +54,62 @@ export const WhatIDoSection = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-portfolio-black">
+    <section id="services" className="section-padding relative">
       <MotionDiv type="fade" direction="up">
         <h2 className="heading text-center">What I Do</h2>
       </MotionDiv>
 
-      <div className="max-w-4xl mx-auto mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
+        {/* Item 1: Public Speaking (Big - Spans 2 rows) */}
         <MotionDiv
-            className="bg-muted rounded-lg overflow-hidden hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-500"
-            type="scale"
-            delay={0.2}
+          className="md:row-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-portfolio-purple/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-500 group min-h-[500px] relative"
+          type="scale"
+          delay={0.2}
         >
-            <div className="grid md:grid-cols-2 items-center">
-                <div className="overflow-hidden h-full">
-                    <img 
-                        src="lovable-uploads/Public_Speaking.jpg" 
-                        alt="Public Speaking" 
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-                <div className="p-6 self-center">
-                    <div className="text-portfolio-purple mb-4">{publicSpeakingService.icon}</div>
-                    <h3 className="text-xl font-semibold mb-3">{publicSpeakingService.title}</h3>
-                    <p className="text-portfolio-purple-light">{publicSpeakingService.description}</p>
-                </div>
-            </div>
-        </MotionDiv>
-      </div>
-
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            icon={service.icon}
-            title={service.title}
-            description={service.description}
-            delay={0.2 * (index + 2)}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-portfolio-black/60 to-portfolio-black/90 z-10" />
+          <img
+            src="lovable-uploads/Public_Speaking.jpg"
+            alt="Public Speaking"
+            className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
           />
-        ))}
+          <div className="relative z-20 h-full flex flex-col justify-end p-8">
+
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">{publicSpeakingService.title}</h3>
+            <p className="text-gray-300 leading-relaxed max-w-md">{publicSpeakingService.description}</p>
+          </div>
+        </MotionDiv>
+
+        {/* Item 2: AI Development */}
+        <ServiceCard
+          icon={services[0].icon}
+          title={services[0].title}
+          description={services[0].description}
+          delay={0.3}
+        />
+
+        {/* Item 3: Analysis & Design (Research) */}
+        <ServiceCard
+          icon={services[1].icon}
+          title={services[1].title}
+          description={services[1].description}
+          delay={0.4}
+        />
+
+        {/* Item 4: Software Engineering */}
+        <ServiceCard
+          icon={services[2].icon}
+          title={services[2].title}
+          description={services[2].description}
+          delay={0.5}
+        />
+
+        {/* Item 5: Generative AI */}
+        <ServiceCard
+          icon={services[3].icon}
+          title={services[3].title}
+          description={services[3].description}
+          delay={0.6}
+        />
       </div>
     </section>
   );

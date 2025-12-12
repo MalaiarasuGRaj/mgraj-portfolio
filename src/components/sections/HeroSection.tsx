@@ -18,7 +18,7 @@ export const HeroSection = () => {
             Malaiarasu G
           </h1>
           <p className="text-xl md:text-2xl text-portfolio-purple-light max-w-2xl mx-auto mb-8">
-            Building skills, taking initiative, and learning by doing.
+            Engineering by profession, educating by passion ❤️
           </p>
           <MotionButton
             className="bg-portfolio-purple text-white hover:bg-portfolio-purple-dark"

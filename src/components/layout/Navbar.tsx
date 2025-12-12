@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
-  { title: "Home", href: "#" },
-  { title: "About", href: "#about" },
-  { title: "Services", href: "#services" },
-  { title: "Projects", href: "#projects" },
-  { title: "Contact", href: "#contact" },
+  { title: "Home", href: "/" },
+  { title: "About", href: "/about" },
+  { title: "Projects", href: "/projects" },
+  { title: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
@@ -26,36 +26,37 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-portfolio-black/90 backdrop-blur-md py-3 shadow-lg shadow-portfolio-purple/5"
-          : "bg-transparent py-5"
-      }`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-portfolio-black/90 backdrop-blur-md py-3 shadow-lg shadow-portfolio-purple/5"
+        : "bg-transparent py-5"
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <a href="#" className="text-portfolio-purple text-xl font-bold">
+        <Link to="/" className="text-portfolio-purple text-xl font-bold">
           Malaiarasu G
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center">
           <nav className="flex space-x-8 mr-4">
             {navLinks.map((link) => (
-              <motion.a
+              <Link
                 key={link.title}
-                href={link.href}
+                to={link.href}
                 className="relative text-portfolio-purple-light hover:text-portfolio-purple transition-colors"
-                whileHover={{
-                  scale: 1.05,
-                }}
               >
-                {link.title}
-              </motion.a>
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-block"
+                >
+                  {link.title}
+                </motion.span>
+              </Link>
             ))}
           </nav>
-          <motion.a 
-            href="https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/" 
-            target="_blank" 
+          <motion.a
+            href="https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-portfolio-purple hover:text-portfolio-purple-light transition-colors"
             whileHover={{ scale: 1.1 }}
@@ -86,19 +87,20 @@ export const Navbar = () => {
           >
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <motion.a
+                <Link
                   key={link.title}
-                  href={link.href}
-                  className="text-portfolio-purple-light hover:text-portfolio-purple py-2 transition-colors"
+                  to={link.href}
+                  className="text-portfolio-purple-light hover:text-portfolio-purple py-2 transition-colors block"
                   onClick={() => setIsOpen(false)}
-                  whileTap={{ scale: 0.95 }}
                 >
-                  {link.title}
-                </motion.a>
+                  <motion.span whileTap={{ scale: 0.95 }} className="block w-full">
+                    {link.title}
+                  </motion.span>
+                </Link>
               ))}
-              <motion.a 
-                href="https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/" 
-                target="_blank" 
+              <motion.a
+                href="https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-portfolio-purple hover:text-portfolio-purple-light py-2 transition-colors flex items-center gap-2"
                 onClick={() => setIsOpen(false)}

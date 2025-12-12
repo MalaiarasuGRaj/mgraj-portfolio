@@ -116,7 +116,7 @@ export const ContactSection = () => {
         )}
 
         <MotionDiv
-          className="card bg-muted p-8"
+          className="card bg-white/5 backdrop-blur-sm border border-white/10 p-8"
           type="fade"
           delay={0.2}
         >

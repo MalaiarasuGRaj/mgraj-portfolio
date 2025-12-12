@@ -64,17 +64,17 @@ export const ProjectsSection = () => {
 
       <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto mt-12">
         {projects.map((project, index) => (
-          <MotionDiv 
+          <MotionDiv
             key={project.title}
-            className="card bg-muted hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-500 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] transform hover:scale-105"
+            className="card bg-white/5 backdrop-blur-sm border border-white/10 hover:border-portfolio-purple/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-500 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] transform hover:-translate-y-2 group"
             type="scale"
             delay={0.2 * (index + 1)}
           >
             <div className="h-40 rounded-t-lg mb-6 overflow-hidden">
               {project.image ? (
-                <img 
-                  src={project.image} 
-                  alt={`${project.title} project`} 
+                <img
+                  src={project.image}
+                  alt={`${project.title} project`}
                   className="w-full h-full object-cover object-center"
                 />
               ) : (
@@ -85,10 +85,10 @@ export const ProjectsSection = () => {
             </div>
             <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
             <p className="text-portfolio-purple-light mb-4">{project.description}</p>
-            
+
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tags.map((tag) => (
-                <span 
+                <span
                   key={tag}
                   className="px-3 py-1 bg-portfolio-purple/10 text-portfolio-purple-light text-xs rounded-full"
                 >
@@ -96,10 +96,10 @@ export const ProjectsSection = () => {
                 </span>
               ))}
             </div>
-            
+
             <div className="flex gap-4">
               {project.githubLink && (
-                <MotionButton 
+                <MotionButton
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2 border-portfolio-purple/50 text-portfolio-purple-light hover:bg-portfolio-purple hover:text-white"
@@ -109,7 +109,7 @@ export const ProjectsSection = () => {
                   GitHub
                 </MotionButton>
               )}
-              
+
               {project.liveLink && (
                 <MotionButton
                   size="sm"

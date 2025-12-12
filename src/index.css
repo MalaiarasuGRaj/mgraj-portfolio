@@ -50,7 +50,7 @@
   }
 
   body {
-    @apply bg-portfolio-black text-portfolio-purple font-poppins;
+    @apply text-portfolio-purple font-poppins;
   }
 
   html {
