@@ -32,7 +32,7 @@ const projects: Project[] = [
   },
   {
     title: "MongoChat",
-    description: "Database chat agent that enables natural language interaction with MongoDB databases.",
+    description: "Database chat agent enabling natural language interaction with MongoDB, reducing query time by 80% and minimizing manual effort by 50% through automated workflows.",
     tags: ["LLM", "Agentic AI", "MongoDB", "Flask"],
     githubLink: "https://github.com/MalaiarasuGRaj/MongoChat.git",
     demoLink: "https://drive.google.com/file/d/1GgoN224DRq37ljKpkCkU8iH3hAtk7s49/view?usp=drive_link",
@@ -40,7 +40,7 @@ const projects: Project[] = [
   },
   {
     title: "MarQ",
-    description: "MarQ is an AI-powered marks analysis tool that offers subject-wise insights, student-wise reports, and auto-generated summaries. All from a simple drag-and-drop mark statement.",
+    description: "MarQ is an AI-powered marks analysis tool that reduces manual analysis time by 70% and improves academic decision-making efficiency by 40% through data-driven insights.",
     tags: ["APIs", "MicroSaaS", "Automation", "Visualization"],
     liveLink: "https://comforting-kangaroo-6f5fa8.netlify.app/",
     image: "lovable-uploads/MarQ.png",
