@@ -61,7 +61,7 @@ export const HeroSection = () => {
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
             </MotionButton>
 
-            <a href="projects" className="block w-full sm:w-auto">
+            <a href="/projects" className="block w-full sm:w-auto">
               <MotionButton
                 className="w-full px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all backdrop-blur-sm flex items-center justify-center gap-2"
               >
