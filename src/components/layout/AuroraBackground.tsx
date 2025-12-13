@@ -20,7 +20,7 @@ export const AuroraBackground = () => {
 
             {/* Top Right Blob */}
             <motion.div
-                className="absolute top-[0%] right-[0%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[100px]"
+                className="absolute top-[0%] right-[0%] w-[40%] h-[40%] bg-blue-500/20 rounded-full blur-[100px]"
                 animate={{
                     x: [0, -30, 0],
                     y: [0, 50, 0],
@@ -35,7 +35,7 @@ export const AuroraBackground = () => {
 
             {/* Bottom Left Blob */}
             <motion.div
-                className="absolute bottom-[0%] -left-[10%] w-[40%] h-[40%] bg-portfolio-purple-light/10 rounded-full blur-[100px]"
+                className="absolute bottom-[0%] -left-[10%] w-[40%] h-[40%] bg-portfolio-purple-light/20 rounded-full blur-[100px]"
                 animate={{
                     x: [0, 40, 0],
                     y: [0, -40, 0],
@@ -50,7 +50,7 @@ export const AuroraBackground = () => {
 
             {/* Bottom Right Blob */}
             <motion.div
-                className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-indigo-500/10 rounded-full blur-[100px]"
+                className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-indigo-500/20 rounded-full blur-[100px]"
                 animate={{
                     x: [0, -40, 0],
                     y: [0, -40, 0],

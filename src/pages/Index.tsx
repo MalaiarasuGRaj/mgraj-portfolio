@@ -9,7 +9,7 @@ import { Navbar } from "@/components/layout/Navbar";
 
 const Index = () => {
   return (
-    <div className="bg-portfolio-black min-h-screen">
+    <div className="min-h-screen">
       <Navbar />
       <HeroSection />
       <AboutSection />

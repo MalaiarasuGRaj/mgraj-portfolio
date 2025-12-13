@@ -26,7 +26,7 @@ export const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="text-sm font-medium text-portfolio-purple-lighter">Available for AI & Product roles</span>
+            <span className="text-sm font-medium text-portfolio-purple-lighter">Having product ideas? Let's build it together</span>
           </MotionDiv>
 
           {/* Main Title */}
