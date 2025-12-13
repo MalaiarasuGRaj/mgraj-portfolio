@@ -34,7 +34,7 @@ export const HeroSection = () => {
             <h2 className="text-xl md:text-2xl font-medium text-portfolio-purple-light/80 tracking-wide">
               Hello, I'm
             </h2>
-            <h1 className="font-sans text-5xl md:text-7xl font-bold tracking-tight">
+            <h1 className="font-sans text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
               <span className="text-white">Malaiarasu</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-portfolio-purple-light to-portfolio-purple">
                 G.
@@ -79,7 +79,7 @@ export const HeroSection = () => {
           delay={0.5}
           className="relative flex justify-center lg:justify-end z-10"
         >
-          <div className="relative w-72 h-72 md:w-96 md:h-96">
+          <div className="relative w-64 h-64 md:w-96 md:h-96">
             {/* Decorative Elements */}
             <div className="absolute inset-0 bg-gradient-to-tr from-portfolio-purple/30 to-blue-500/30 rounded-full blur-[40px] animate-pulse" />
 

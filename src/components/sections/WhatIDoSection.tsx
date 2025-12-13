@@ -62,7 +62,7 @@ export const WhatIDoSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
         {/* Item 1: Public Speaking (Big - Spans 2 rows) */}
         <MotionDiv
-          className="md:row-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-portfolio-purple/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-500 group min-h-[500px] relative"
+          className="md:row-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-portfolio-purple/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-500 group min-h-[350px] md:min-h-[500px] relative"
           type="scale"
           delay={0.2}
         >
