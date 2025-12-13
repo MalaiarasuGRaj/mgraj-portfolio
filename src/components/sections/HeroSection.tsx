@@ -1,4 +1,5 @@
 import { MotionDiv } from "../animation/MotionDiv";
+import { Link } from "react-router-dom";
 import { MotionButton } from "../animation/MotionButton";
 import { ArrowDown, ArrowRight, Sparkles, Brain, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
@@ -61,14 +62,14 @@ export const HeroSection = () => {
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
             </MotionButton>
 
-            <a href="/projects" className="block w-full sm:w-auto">
+            <Link to="/projects" className="block w-full sm:w-auto">
               <MotionButton
                 className="w-full px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all backdrop-blur-sm flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4 text-portfolio-purple-lighter" />
                 <span>View My Work</span>
               </MotionButton>
-            </a>
+            </Link>
           </MotionDiv>
         </div>
 
@@ -103,27 +104,23 @@ export const HeroSection = () => {
             <motion.div
               animate={{ y: [0, 15, 0], x: [0, 5, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -right-8 top-10 bg-black/40 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl hidden md:block"
+              className="absolute -right-4 top-4 md:-right-8 md:top-10 bg-black/40 backdrop-blur-md border border-white/10 p-2 md:p-4 rounded-xl shadow-xl flex items-center gap-2 md:gap-3"
             >
-              <div className="flex items-center gap-3">
-                <div className="p-1.5 rounded-full bg-purple-500/20">
-                  <Brain className="w-4 h-4 text-purple-400" />
-                </div>
-                <span className="text-xs font-mono text-white/80">AI Engineer</span>
+              <div className="p-1.5 rounded-full bg-purple-500/20">
+                <Brain className="w-3 h-3 md:w-4 md:h-4 text-purple-400" />
               </div>
+              <span className="text-[10px] md:text-xs font-mono text-white/80">AI Engineer</span>
             </motion.div>
 
             <motion.div
               animate={{ y: [0, -15, 0], x: [0, -5, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -left-8 bottom-20 bg-black/40 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl hidden md:block"
+              className="absolute -left-4 bottom-10 md:-left-8 md:bottom-20 bg-black/40 backdrop-blur-md border border-white/10 p-2 md:p-4 rounded-xl shadow-xl flex items-center gap-2 md:gap-3"
             >
-              <div className="flex items-center gap-3">
-                <div className="p-1.5 rounded-full bg-blue-500/20">
-                  <Rocket className="w-4 h-4 text-blue-400" />
-                </div>
-                <span className="text-xs font-mono text-white/80">Product Dev</span>
+              <div className="p-1.5 rounded-full bg-blue-500/20">
+                <Rocket className="w-3 h-3 md:w-4 md:h-4 text-blue-400" />
               </div>
+              <span className="text-[10px] md:text-xs font-mono text-white/80">Product Dev</span>
             </motion.div>
           </div>
         </MotionDiv>

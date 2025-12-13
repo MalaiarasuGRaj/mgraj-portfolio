@@ -91,7 +91,7 @@ export const AboutSection = () => {
 
               {/* Experience 1 */}
               <MotionDiv
-                className="relative pl-12"
+                className="relative pl-8 md:pl-12"
                 type="fade"
                 delay={0.1}
               >
@@ -123,7 +123,7 @@ export const AboutSection = () => {
 
               {/* Experience 2 */}
               <MotionDiv
-                className="relative pl-12"
+                className="relative pl-8 md:pl-12"
                 type="fade"
                 delay={0.2}
               >
