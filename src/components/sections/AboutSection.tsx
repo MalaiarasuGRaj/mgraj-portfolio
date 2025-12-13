@@ -85,51 +85,74 @@ export const AboutSection = () => {
             delay={0.4}
           >
             <h3 className="subheading">My Journey</h3>
-            <div className="relative border-l-2 border-portfolio-purple-light pl-8 space-y-12 mb-16">
+            <div className="relative space-y-12 mb-16">
+              {/* Timeline Line */}
+              <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gradient-to-b from-portfolio-purple via-purple-400 to-transparent opacity-30"></div>
+
               {/* Experience 1 */}
-              <div className="relative">
-                <div className="absolute -left-10 mt-1.5 h-5 w-5 rounded-full border-2 border-portfolio-purple-light bg-portfolio-black"></div>
-                <div className="card bg-white/5 backdrop-blur-sm border border-white/10 hover:border-portfolio-purple/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
-                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
-                    <Calendar size={18} />
-                    <span>October 2024 - Present</span>
+              <MotionDiv
+                className="relative pl-12"
+                type="fade"
+                delay={0.1}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+
+                <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                    <h4 className="text-xl font-bold text-white group-hover:text-portfolio-purple transition-colors">
+                      Generative AI Intern
+                    </h4>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-portfolio-purple/10 text-portfolio-purple-light text-xs font-medium border border-portfolio-purple/20">
+                      <Calendar size={12} />
+                      Oct 2024 - Present
+                    </span>
                   </div>
-                  <h4 className="text-xl font-semibold text-portfolio-purple mb-1">
-                    Generative AI Intern
-                  </h4>
-                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4">
-                    <Briefcase size={18} />
+
+                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4 text-sm font-medium">
+                    <Briefcase size={16} className="text-portfolio-purple" />
                     <span>DigitalT3 Software Solutions Pvt. Ltd., USA</span>
                   </div>
-                  <p className="text-portfolio-purple-light">
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
                     Contributed to the development of Generative AI-based Proof of Concepts (PoCs)
                     addressing real-world business problems. Worked across the development lifecycle, including implementing features and verifying functionality through systematic testing workflows.
                   </p>
                 </div>
-              </div>
+              </MotionDiv>
 
               {/* Experience 2 */}
-              <div className="relative">
-                <div className="absolute -left-10 mt-1.5 h-5 w-5 rounded-full border-2 border-portfolio-purple-light bg-portfolio-black"></div>
-                <div className="card bg-white/5 backdrop-blur-sm border border-white/10 hover:border-portfolio-purple/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-all">
-                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-2">
-                    <Calendar size={18} />
-                    <span>May 2024 - August 2024</span>
+              <MotionDiv
+                className="relative pl-12"
+                type="fade"
+                delay={0.2}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+
+                <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                    <h4 className="text-xl font-bold text-white group-hover:text-portfolio-purple transition-colors">
+                      Research Intern
+                    </h4>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-portfolio-purple/10 text-portfolio-purple-light text-xs font-medium border border-portfolio-purple/20">
+                      <Calendar size={12} />
+                      May 2024 - Aug 2024
+                    </span>
                   </div>
-                  <h4 className="text-xl font-semibold text-portfolio-purple mb-1">
-                    Research Intern
-                  </h4>
-                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4">
-                    <Briefcase size={18} />
+
+                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4 text-sm font-medium">
+                    <Briefcase size={16} className="text-portfolio-purple" />
                     <span>Indian Institute of Information Technology, Kottayam</span>
                   </div>
-                  <p className="text-portfolio-purple-light">
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
                     Developed an Automated Question and Answer Generation System using various
                     Natural Language Processing (NLP) techniques as part of an AI-powered hiring
                     solution for a multinational company (MNC).
                   </p>
                 </div>
-              </div>
+              </MotionDiv>
             </div>
 
             {/* Divider */}
