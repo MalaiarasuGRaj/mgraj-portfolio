@@ -1,7 +1,7 @@
 
 import { MotionDiv } from "../animation/MotionDiv";
 import { Link } from "react-router-dom";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Link as LinkIcon } from "lucide-react";
 
 export const FooterSection = () => {
   return (
@@ -49,6 +49,14 @@ export const FooterSection = () => {
               className="p-2 bg-white/5 rounded-full hover:bg-portfolio-purple/20 hover:text-portfolio-purple transition-all text-gray-400"
             >
               <Github size={20} />
+            </a>
+            <a
+              href="https://topmate.io/mgraj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-portfolio-purple/10 hover:bg-portfolio-purple/20 text-portfolio-purple rounded-full transition-all text-sm font-semibold border border-portfolio-purple/20 hover:border-portfolio-purple/50"
+            >
+              Book a Session
             </a>
           </MotionDiv>
         </div>

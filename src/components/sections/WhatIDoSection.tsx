@@ -1,6 +1,6 @@
 
 import { MotionDiv } from "../animation/MotionDiv";
-import { Code, Briefcase, Star, Image, Mic } from "lucide-react";
+import { Code, Briefcase, Star, Image, Mic, ExternalLink } from "lucide-react";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -75,7 +75,16 @@ export const WhatIDoSection = () => {
           <div className="relative z-20 h-full flex flex-col justify-end p-8">
 
             <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">{publicSpeakingService.title}</h3>
-            <p className="text-gray-300 leading-relaxed max-w-md">{publicSpeakingService.description}</p>
+            <p className="text-gray-300 leading-relaxed max-w-md mb-6">{publicSpeakingService.description}</p>
+            <a
+              href="https://topmate.io/mgraj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-portfolio-purple hover:text-white transition-colors group/link w-fit"
+            >
+              <span className="font-semibold">Book a Session</span>
+              <ExternalLink size={18} className="transition-transform group-hover/link:translate-x-1" />
+            </a>
           </div>
         </MotionDiv>
 

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Linkedin } from "lucide-react";
+import { Menu, X, Linkedin, Link as LinkIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -55,6 +55,16 @@ export const Navbar = () => {
             ))}
           </nav>
           <motion.a
+            href="https://topmate.io/mgraj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-portfolio-purple hover:text-portfolio-purple-light transition-colors mr-4 font-bold"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Topmate
+          </motion.a>
+          <motion.a
             href="https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/"
             target="_blank"
             rel="noopener noreferrer"
@@ -107,6 +117,16 @@ export const Navbar = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Linkedin size={20} /> LinkedIn
+              </motion.a>
+              <motion.a
+                href="https://topmate.io/mgraj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-portfolio-purple hover:text-portfolio-purple-light py-2 transition-colors flex items-center gap-2"
+                onClick={() => setIsOpen(false)}
+                whileTap={{ scale: 0.95 }}
+              >
+                <LinkIcon size={20} /> Topmate
               </motion.a>
             </div>
           </motion.div>
