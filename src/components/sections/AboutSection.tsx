@@ -105,7 +105,7 @@ export const AboutSection = () => {
                     </h4>
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-portfolio-purple/10 text-portfolio-purple-light text-xs font-medium border border-portfolio-purple/20">
                       <Calendar size={12} />
-                      Oct 2024 - Present
+                      Oct 2024 - December 2025
                     </span>
                   </div>
 
