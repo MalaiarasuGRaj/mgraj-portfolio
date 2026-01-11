@@ -15,6 +15,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Connect PMS",
+    description: "Freelance Full-Stack Project: Streamlined proposal workflows with dynamic pricing and client-side PDF generation for operational efficiency.",
+    tags: ["React", "Tailwind CSS", "Supabase", "PDF Generation", "Full Stack"],
+    liveLink: "https://connect-pms.vercel.app/",
+    image: "/lovable-uploads/Connect PMS.png",
+  },
+  {
     title: "Diffusion-LLM POC",
     description: "A proof-of-concept for a PDF summarizer with visual analysis capabilities, demonstrating the power of diffusion models and LLMs.",
     tags: ["GenAI", "Diffusion LLM (dLLM)", "Streamlit", "POC"],

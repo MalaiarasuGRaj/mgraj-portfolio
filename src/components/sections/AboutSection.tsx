@@ -89,11 +89,42 @@ export const AboutSection = () => {
               {/* Timeline Line */}
               <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gradient-to-b from-portfolio-purple via-purple-400 to-transparent opacity-30"></div>
 
-              {/* Experience 1 */}
+              {/* Experience New */}
               <MotionDiv
                 className="relative pl-8 md:pl-12"
                 type="fade"
                 delay={0.1}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+
+                <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                    <h4 className="text-xl font-bold text-white group-hover:text-portfolio-purple transition-colors">
+                      Data Scientist (Intern)
+                    </h4>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-portfolio-purple/10 text-portfolio-purple-light text-xs font-medium border border-portfolio-purple/20">
+                      <Calendar size={12} />
+                      Jan 2026 - Present
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4 text-sm font-medium">
+                    <Briefcase size={16} className="text-portfolio-purple" />
+                    <span>vCreaTek Consulting Services Pvt Ltd, Pune</span>
+                  </div>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Embarking on a new professional journey in Data Science.
+                  </p>
+                </div>
+              </MotionDiv>
+
+              {/* Experience 1 */}
+              <MotionDiv
+                className="relative pl-8 md:pl-12"
+                type="fade"
+                delay={0.2}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
@@ -125,7 +156,7 @@ export const AboutSection = () => {
               <MotionDiv
                 className="relative pl-8 md:pl-12"
                 type="fade"
-                delay={0.2}
+                delay={0.3}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
