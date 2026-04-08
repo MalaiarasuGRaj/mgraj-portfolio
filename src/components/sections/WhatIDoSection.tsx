@@ -77,12 +77,12 @@ export const WhatIDoSection = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">{publicSpeakingService.title}</h3>
             <p className="text-gray-300 leading-relaxed max-w-md mb-6">{publicSpeakingService.description}</p>
             <a
-              href="https://topmate.io/mgraj"
+              href="https://wa.me/918270484867"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-portfolio-purple hover:text-white transition-colors group/link w-fit"
             >
-              <span className="font-semibold">Book a Session</span>
+              <span className="font-semibold">Connect on WhatsApp</span>
               <ExternalLink size={18} className="transition-transform group-hover/link:translate-x-1" />
             </a>
           </div>

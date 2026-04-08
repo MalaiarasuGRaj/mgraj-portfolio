@@ -51,12 +51,12 @@ export const FooterSection = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://topmate.io/mgraj"
+              href="https://wa.me/918270484867"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-portfolio-purple/10 hover:bg-portfolio-purple/20 text-portfolio-purple rounded-full transition-all text-sm font-semibold border border-portfolio-purple/20 hover:border-portfolio-purple/50"
             >
-              Book a Session
+              Connect on WhatsApp
             </a>
           </MotionDiv>
         </div>
