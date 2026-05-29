@@ -7,18 +7,24 @@ interface ServiceCardProps {
   title: string;
   description: string;
   delay: number;
+  className?: string;
 }
 
-const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => {
+const ServiceCard = ({ icon, title, description, delay, className }: ServiceCardProps) => {
   return (
     <MotionDiv
-      className="card bg-white/5 backdrop-blur-sm border border-white/10 hover:border-portfolio-purple/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 group h-full"
+      className={`card group h-full flex flex-col justify-between overflow-hidden relative ${className || ''}`}
       type="scale"
       delay={delay}
     >
-      <div className="text-portfolio-purple transition-transform duration-300 mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-portfolio-purple transition-colors">{title}</h3>
-      <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">{description}</p>
+      <div className="absolute inset-0 bg-gradient-to-br from-portfolio-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="relative z-10">
+        <div className="text-portfolio-purple/70 group-hover:text-portfolio-purple group-hover:scale-110 transition-all duration-500 mb-6 drop-shadow-md">
+          {icon}
+        </div>
+        <h3 className="text-xl md:text-2xl font-bold mb-3 text-white/90 group-hover:text-white transition-colors">{title}</h3>
+        <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed text-sm md:text-base">{description}</p>
+      </div>
     </MotionDiv>
   );
 };
@@ -59,30 +65,32 @@ export const WhatIDoSection = () => {
         <h2 className="heading text-center">What I Do</h2>
       </MotionDiv>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
-        {/* Item 1: Public Speaking (Big - Spans 2 rows) */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-12 auto-rows-auto">
+        {/* Item 1: Public Speaking (Large Bento Box) */}
         <MotionDiv
-          className="md:row-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-portfolio-purple/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-500 group min-h-[350px] md:min-h-[500px] relative"
+          className="md:col-span-2 md:row-span-2 card p-0 overflow-hidden group min-h-[400px] relative"
           type="scale"
           delay={0.2}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-portfolio-black/60 to-portfolio-black/90 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent z-10" />
           <img
             src="lovable-uploads/Public_Speaking.jpg"
             alt="Public Speaking"
-            className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-luminosity group-hover:mix-blend-normal"
           />
-          <div className="relative z-20 h-full flex flex-col justify-end p-8">
-
-            <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">{publicSpeakingService.title}</h3>
-            <p className="text-gray-300 leading-relaxed max-w-md mb-6">{publicSpeakingService.description}</p>
+          <div className="relative z-20 h-full flex flex-col justify-end p-8 md:p-10">
+            <div className="bg-portfolio-purple/20 backdrop-blur-md border border-portfolio-purple/30 w-fit p-3 rounded-2xl mb-6 shadow-lg">
+              {publicSpeakingService.icon}
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">{publicSpeakingService.title}</h3>
+            <p className="text-gray-300 leading-relaxed max-w-xl mb-8 text-sm md:text-base">{publicSpeakingService.description}</p>
             <a
               href="https://wa.me/918270484867"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-portfolio-purple hover:text-white transition-colors group/link w-fit"
+              className="inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all group/link w-fit hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
             >
-              <span className="font-semibold">Connect on WhatsApp</span>
+              <span>Connect on WhatsApp</span>
               <ExternalLink size={18} className="transition-transform group-hover/link:translate-x-1" />
             </a>
           </div>
@@ -94,6 +102,7 @@ export const WhatIDoSection = () => {
           title={services[0].title}
           description={services[0].description}
           delay={0.3}
+          className="md:col-span-1"
         />
 
         {/* Item 3: Analysis & Design (Research) */}
@@ -102,22 +111,25 @@ export const WhatIDoSection = () => {
           title={services[1].title}
           description={services[1].description}
           delay={0.4}
+          className="md:col-span-1"
         />
 
-        {/* Item 4: Software Engineering */}
-        <ServiceCard
-          icon={services[2].icon}
-          title={services[2].title}
-          description={services[2].description}
-          delay={0.5}
-        />
-
-        {/* Item 5: Generative AI */}
+        {/* Item 4: Generative AI (Wide Bento Box) */}
         <ServiceCard
           icon={services[3].icon}
           title={services[3].title}
           description={services[3].description}
+          delay={0.5}
+          className="md:col-span-2"
+        />
+
+        {/* Item 5: Software Engineering */}
+        <ServiceCard
+          icon={services[2].icon}
+          title={services[2].title}
+          description={services[2].description}
           delay={0.6}
+          className="md:col-span-1"
         />
       </div>
     </section>

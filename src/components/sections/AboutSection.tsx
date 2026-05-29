@@ -89,7 +89,7 @@ export const AboutSection = () => {
               {/* Timeline Line */}
               <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gradient-to-b from-portfolio-purple via-purple-400 to-transparent opacity-30"></div>
 
-              {/* Experience New */}
+              {/* Experience Current */}
               <MotionDiv
                 className="relative pl-8 md:pl-12"
                 type="fade"
@@ -101,22 +101,45 @@ export const AboutSection = () => {
                 <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                     <h4 className="text-xl font-bold text-white group-hover:text-portfolio-purple transition-colors">
-                      Data Scientist (Intern)
+                      Associate Trainee - Data Engineer
                     </h4>
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-portfolio-purple/10 text-portfolio-purple-light text-xs font-medium border border-portfolio-purple/20">
                       <Calendar size={12} />
-                      Jan 2026 - Present
+                      May 2026 - Present
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2 text-portfolio-purple-light mb-4 text-sm font-medium">
                     <Briefcase size={16} className="text-portfolio-purple" />
-                    <span>vCreaTek Consulting Services Pvt Ltd, Pune</span>
+                    <span>VCreaTek Consulting Services Pvt Ltd, Pune</span>
+                  </div>
+                </div>
+              </MotionDiv>
+
+              {/* Experience Intern */}
+              <MotionDiv
+                className="relative pl-8 md:pl-12"
+                type="fade"
+                delay={0.15}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+
+                <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                    <h4 className="text-xl font-bold text-white group-hover:text-portfolio-purple transition-colors">
+                      Associate Trainee - Intern
+                    </h4>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-portfolio-purple/10 text-portfolio-purple-light text-xs font-medium border border-portfolio-purple/20">
+                      <Calendar size={12} />
+                      Jan 2026 - Apr 2026
+                    </span>
                   </div>
 
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    Embarking on a new professional journey in Data Science.
-                  </p>
+                  <div className="flex items-center gap-2 text-portfolio-purple-light mb-4 text-sm font-medium">
+                    <Briefcase size={16} className="text-portfolio-purple" />
+                    <span>VCreaTek Consulting Services Pvt Ltd, Pune</span>
+                  </div>
                 </div>
               </MotionDiv>
 
@@ -144,11 +167,6 @@ export const AboutSection = () => {
                     <Briefcase size={16} className="text-portfolio-purple" />
                     <span>DigitalT3 Software Solutions Pvt. Ltd., USA</span>
                   </div>
-
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    Contributed to the development of Generative AI-based Proof of Concepts (PoCs)
-                    addressing real-world business problems. Worked across the development lifecycle, including implementing features and verifying functionality through systematic testing workflows.
-                  </p>
                 </div>
               </MotionDiv>
 
@@ -176,12 +194,6 @@ export const AboutSection = () => {
                     <Briefcase size={16} className="text-portfolio-purple" />
                     <span>Indian Institute of Information Technology, Kottayam</span>
                   </div>
-
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    Developed an Automated Question and Answer Generation System using various
-                    Natural Language Processing (NLP) techniques as part of an AI-powered hiring
-                    solution for a multinational company (MNC).
-                  </p>
                 </div>
               </MotionDiv>
             </div>

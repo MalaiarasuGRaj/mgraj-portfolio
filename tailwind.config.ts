@@ -81,8 +81,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Poppins', 'sans-serif'],
-				poppins: ['Poppins', 'sans-serif'],
+				sans: ['Outfit', 'sans-serif'],
+				outfit: ['Outfit', 'sans-serif'],
 				handwriting: ['Caveat', 'cursive'],
 			},
 			borderRadius: {

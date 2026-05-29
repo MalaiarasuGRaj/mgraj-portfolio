@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const navLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Projects", href: "/projects" },
   { title: "Services", href: "/services" },
   { title: "Contact", href: "/contact" },
 ];
@@ -27,9 +26,9 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-portfolio-black/90 backdrop-blur-md py-3 shadow-lg shadow-portfolio-purple/5"
-        : "bg-transparent py-5"
+      className={`fixed w-full top-0 z-50 transition-all duration-500 ${scrolled
+        ? "bg-[#050505]/80 backdrop-blur-xl py-4 border-b border-white/5 shadow-xl shadow-black/50"
+        : "bg-transparent py-6"
         }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -39,15 +38,15 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center">
-          <nav className="flex space-x-8 mr-4">
+          <nav className="flex space-x-8 mr-6">
             {navLinks.map((link) => (
               <Link
                 key={link.title}
                 to={link.href}
-                className="relative text-portfolio-purple-light hover:text-portfolio-purple transition-colors"
+                className="relative text-white/70 hover:text-white transition-colors text-sm font-medium tracking-wide"
               >
                 <motion.span
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ y: -2 }}
                   className="inline-block"
                 >
                   {link.title}

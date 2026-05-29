@@ -1,5 +1,4 @@
 import { MotionDiv } from "../animation/MotionDiv";
-import { Link } from "react-router-dom";
 import { MotionButton } from "../animation/MotionButton";
 import { ArrowDown, ArrowRight, Sparkles, Brain, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
@@ -8,8 +7,8 @@ export const HeroSection = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center section-padding relative overflow-hidden">
       {/* Background Gradients for depth */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-portfolio-purple/20 blur-[120px] rounded-full -z-10" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full -z-10" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-portfolio-purple/30 blur-[150px] rounded-full -z-10 mix-blend-screen" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/20 blur-[150px] rounded-full -z-10 mix-blend-screen" />
 
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -52,24 +51,14 @@ export const HeroSection = () => {
           </MotionDiv>
 
           {/* Buttons */}
-          <MotionDiv type="fade" direction="up" delay={0.4} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <MotionDiv type="fade" direction="up" delay={0.4} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-6">
             <MotionButton
-              className="group relative px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all flex items-center justify-center gap-2 overflow-hidden"
+              className="group relative px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-all flex items-center justify-center gap-3 overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
               onClick={() => window.open("https://www.linkedin.com/in/malaiarasu-g-raj-38b695252/", "_blank")}
             >
-              <span>Let's Connect</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <span className="relative z-10">Let's Connect</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
             </MotionButton>
-
-            <Link to="/projects" className="block w-full sm:w-auto">
-              <MotionButton
-                className="w-full px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all backdrop-blur-sm flex items-center justify-center gap-2"
-              >
-                <Sparkles className="w-4 h-4 text-portfolio-purple-lighter" />
-                <span>View My Work</span>
-              </MotionButton>
-            </Link>
           </MotionDiv>
         </div>
 

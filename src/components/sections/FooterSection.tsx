@@ -23,7 +23,7 @@ export const FooterSection = () => {
           >
             <Link to="/" className="text-gray-400 hover:text-portfolio-purple transition-colors">Home</Link>
             <Link to="/about" className="text-gray-400 hover:text-portfolio-purple transition-colors">About</Link>
-            <Link to="/projects" className="text-gray-400 hover:text-portfolio-purple transition-colors">Projects</Link>
+            <Link to="/services" className="text-gray-400 hover:text-portfolio-purple transition-colors">Services</Link>
             <Link to="/contact" className="text-gray-400 hover:text-portfolio-purple transition-colors">Contact</Link>
           </MotionDiv>
 
