@@ -74,7 +74,7 @@ export const WhatIDoSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent z-10" />
           <img
-            src="lovable-uploads/Public_Speaking.jpg"
+            src="/uploads/Public_Speaking.jpg"
             alt="Public Speaking"
             className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-luminosity group-hover:mix-blend-normal"
           />

@@ -82,7 +82,7 @@ export const HeroSection = () => {
               <div className="w-full h-full rounded-xl overflow-hidden relative">
                 <div className="absolute inset-0 bg-portfolio-purple/20 mix-blend-overlay z-10"></div>
                 <img
-                  src="/lovable-uploads/MGRaj.jpg"
+                  src="/uploads/MGRaj.jpg"
                   alt="Malaiarasu G"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 />
