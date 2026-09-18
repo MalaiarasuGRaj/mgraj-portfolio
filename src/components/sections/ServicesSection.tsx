@@ -1,6 +1,6 @@
 
 import { MotionDiv } from "../animation/MotionDiv";
-import { Code, Briefcase, GraduationCap, Cpu, Users, ExternalLink } from "lucide-react";
+import { Code, Sparkles, ExternalLink } from "lucide-react";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -12,7 +12,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => {
   return (
     <MotionDiv
-      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-portfolio-purple/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 group h-full flex flex-col"
+      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-portfolio-purple/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)] transition-all duration-300 group h-full flex flex-col"
       type="scale"
       delay={delay}
     >
@@ -41,19 +41,9 @@ const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => {
 export const ServicesSection = () => {
   const services = [
     {
-      icon: <GraduationCap size={44} />,
-      title: "Placement Mentoring",
-      description: "One-to-one personalized career guidance and interview preparation specifically designed for college students aiming for top-tier placements.",
-    },
-    {
-      icon: <Cpu size={44} />,
-      title: "AI Fluency Mentoring",
-      description: "Personalized coaching to help you become AI-fluent. Learn to leverage LLMs, prompt engineering, and AI tools to 10x your productivity.",
-    },
-    {
-      icon: <Users size={44} />,
-      title: "Corporate & College AI Training",
-      description: "Bridging the AI skill gap through structured workshops and training programs tailored for educational institutions and corporate teams.",
+      icon: <Sparkles size={44} />,
+      title: "AI Application Development",
+      description: "Building intelligent, production-ready applications powered by LLMs, NLP, and generative AI — from prototype to deployment.",
     },
     {
       icon: <Code size={44} />,
@@ -68,14 +58,14 @@ export const ServicesSection = () => {
         <MotionDiv type="fade" direction="up">
           <span className="block text-portfolio-purple font-medium mb-2 text-center">HOW I CAN HELP</span>
           <h1 className="text-4xl md:text-6xl font-black text-white text-center mb-6">
-            My <span className="text-gradient">Services</span>
+            My <span className="gradient-text">Services</span>
           </h1>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16 text-lg">
-            I offer a range of specialized services to help individuals and organizations thrive in the age of AI and modern software development.
+            AI application development and engineering services for teams building with AI.
           </p>
         </MotionDiv>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

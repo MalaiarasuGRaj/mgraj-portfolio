@@ -4,44 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 270 94% 65%;
+    --background: 240 5% 4%;
+    --foreground: 240 6% 93%;
 
-    --card: 0 0% 4%;
-    --card-foreground: 270 94% 65%;
+    --card: 240 5% 8%;
+    --card-foreground: 240 6% 93%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 270 94% 65%;
+    --popover: 240 5% 8%;
+    --popover-foreground: 240 6% 93%;
 
-    --primary: 270 94% 65%;
+    --primary: 258 90% 66%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 270 70% 84%;
-    --secondary-foreground: 270 94% 65%;
+    --secondary: 240 5% 14%;
+    --secondary-foreground: 240 6% 93%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 270 70% 84%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 270 94% 90%;
-    --accent-foreground: 270 94% 65%;
+    --accent: 240 5% 14%;
+    --accent-foreground: 240 6% 93%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 270 10% 40%;
-    --input: 270 10% 40%;
-    --ring: 270 94% 65%;
+    --border: 240 6% 16%;
+    --input: 240 6% 16%;
+    --ring: 258 90% 66%;
 
     --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   * {
@@ -49,7 +40,7 @@
   }
 
   body {
-    @apply text-portfolio-purple font-sans bg-[#050505] antialiased selection:bg-portfolio-purple/30 selection:text-white;
+    @apply text-foreground font-sans bg-portfolio-black antialiased selection:bg-portfolio-purple/30 selection:text-white;
   }
 
   html {
@@ -65,19 +56,19 @@
   }
 
   .heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-portfolio-purple;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground;
   }
 
   .subheading {
-    @apply text-xl md:text-2xl font-medium mb-4 text-portfolio-purple-light;
+    @apply text-xl md:text-2xl font-medium mb-4 text-muted-foreground;
   }
 
   .card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:border-portfolio-purple/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-500;
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:border-portfolio-purple/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.3)] transition-all duration-500;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-portfolio-purple to-portfolio-purple-light bg-clip-text text-transparent;
+    @apply text-portfolio-purple;
   }
 
   .btn {

@@ -74,7 +74,7 @@ export const AboutSection = () => {
           delay={0.2}
         >
           <p className="mb-6">
-            I’m an AI enthusiast driven by innovation and the future of technology. With a strong interest in long-term investing, I enjoy exploring ideas that create lasting impact. Passionate about public speaking and mentoring, I strive to inspire and guide the next generation of changemakers.
+            I’m an AI Engineer and Trainer driven by innovation and the future of technology. I build intelligent products and applications — and I’m equally passionate about helping others learn to build with AI, through public speaking, mentoring, and structured training. I also have a strong interest in long-term investing and ideas that create lasting impact.
             <span className="block font-handwriting text-3xl mt-4 text-right text-portfolio-purple">- Malaiarasu</span>
           </p>
         </MotionDiv>
@@ -96,7 +96,7 @@ export const AboutSection = () => {
                 delay={0.1}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(139,92,246,0.5)] z-10 ring-4 ring-black/50"></div>
 
                 <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
@@ -123,7 +123,7 @@ export const AboutSection = () => {
                 delay={0.15}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(139,92,246,0.5)] z-10 ring-4 ring-black/50"></div>
 
                 <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
@@ -150,7 +150,7 @@ export const AboutSection = () => {
                 delay={0.2}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(139,92,246,0.5)] z-10 ring-4 ring-black/50"></div>
 
                 <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
@@ -177,7 +177,7 @@ export const AboutSection = () => {
                 delay={0.3}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(168,85,247,0.5)] z-10 ring-4 ring-black/50"></div>
+                <div className="absolute left-[11px] top-2 h-4 w-4 rounded-full bg-portfolio-purple shadow-[0_0_10px_rgba(139,92,246,0.5)] z-10 ring-4 ring-black/50"></div>
 
                 <div className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">

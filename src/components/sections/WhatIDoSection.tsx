@@ -1,6 +1,7 @@
 
+import { Link } from "react-router-dom";
 import { MotionDiv } from "../animation/MotionDiv";
-import { Code, Briefcase, Star, Image, Mic, ExternalLink } from "lucide-react";
+import { Code, Briefcase, Star, Image, Mic, ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -84,15 +85,13 @@ export const WhatIDoSection = () => {
             </div>
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">{publicSpeakingService.title}</h3>
             <p className="text-gray-300 leading-relaxed max-w-xl mb-8 text-sm md:text-base">{publicSpeakingService.description}</p>
-            <a
-              href="https://wa.me/918270484867"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/training"
               className="inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all group/link w-fit hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
             >
-              <span>Connect on WhatsApp</span>
-              <ExternalLink size={18} className="transition-transform group-hover/link:translate-x-1" />
-            </a>
+              <span>See Training Programs</span>
+              <ArrowRight size={18} className="transition-transform group-hover/link:translate-x-1" />
+            </Link>
           </div>
         </MotionDiv>
 

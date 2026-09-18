@@ -1,11 +1,12 @@
 import { MotionDiv } from "../animation/MotionDiv";
 import { MotionButton } from "../animation/MotionButton";
-import { ArrowDown, ArrowRight, Sparkles, Brain, Rocket } from "lucide-react";
+import { CertificationsSection } from "./CertificationsSection";
+import { ArrowDown, ArrowRight, Sparkles, Brain, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center section-padding relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center section-padding pt-32 md:pt-40 relative overflow-hidden">
       {/* Background Gradients for depth */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-portfolio-purple/30 blur-[150px] rounded-full -z-10 mix-blend-screen" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/20 blur-[150px] rounded-full -z-10 mix-blend-screen" />
@@ -45,8 +46,8 @@ export const HeroSection = () => {
           {/* Tagline */}
           <MotionDiv type="fade" direction="up" delay={0.3}>
             <p className="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
-              Transforming ideas into <span className="text-white font-medium">intelligent products</span> with AI.
-              I specialize in building scalable, AI-driven solutions and seamless user experiences.
+              I'm an <span className="text-white font-medium">AI Engineer and Trainer</span> — I build
+              intelligent products with AI, and help people and teams become AI-fluent.
             </p>
           </MotionDiv>
 
@@ -107,17 +108,27 @@ export const HeroSection = () => {
               className="absolute -left-4 bottom-10 md:-left-8 md:bottom-20 bg-black/40 backdrop-blur-md border border-white/10 p-2 md:p-4 rounded-xl shadow-xl flex items-center gap-2 md:gap-3"
             >
               <div className="p-1.5 rounded-full bg-blue-500/20">
-                <Rocket className="w-3 h-3 md:w-4 md:h-4 text-blue-400" />
+                <GraduationCap className="w-3 h-3 md:w-4 md:h-4 text-blue-400" />
               </div>
-              <span className="text-[10px] md:text-xs font-mono text-white/80">Product Dev</span>
+              <span className="text-[10px] md:text-xs font-mono text-white/80">Trainer</span>
             </motion.div>
           </div>
         </MotionDiv>
       </div>
 
+      {/* Certifications */}
+      <MotionDiv
+        type="fade"
+        direction="up"
+        delay={0.6}
+        className="container mx-auto mt-16 md:mt-20 pt-8 border-t border-white/5"
+      >
+        <CertificationsSection />
+      </MotionDiv>
+
       {/* Scroll Down Indicator */}
       <MotionDiv
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="flex justify-center mt-10"
         delay={1.5}
         type="fade"
       >
